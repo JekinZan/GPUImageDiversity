@@ -10,7 +10,8 @@
 #import <GPUImage.h>
 #import "FouncationView.h"
 #import <VideoToolbox/VideoToolbox.h>
-
+#import "JKGPUImageVideoCamera.h"
+#import "JKGPUImageCaptureDataHandler.h"
 typedef enum {
     PASSTHROUGH_VIDEO,
     SIMPLE_THRESHOLDING,
@@ -26,12 +27,13 @@ typedef enum {
 @property (nonatomic,strong) GPUImageUIElement *element;
 @property (nonatomic,strong) GPUImageFilter *alphaFilter;
 @property (nonatomic,strong) GPUImageView *filteredVideoView;
-@property (nonatomic,strong) GPUImageVideoCamera *videoCamera;//当前模式,一开始为视频
+@property (nonatomic,strong) JKGPUImageVideoCamera *videoCamera;//当前模式,一开始为视频
 @property (nonatomic,strong) GPUImageMovieWriter *movieWriter;//写入视频
-
+@property (nonatomic,strong) JKGPUImageCaptureDataHandler *dataHandler;//处理音视频的类
 @property (weak, nonatomic) IBOutlet UIButton *warterMarkBtn;
 @property (weak, nonatomic) IBOutlet UIButton *removeMarkBtn;
-@property (nonatomic,strong) UIImageView *imageView;
+    @property (weak, nonatomic) IBOutlet UIButton *flowBtn;
+    @property (nonatomic,strong) UIImageView *imageView;
 @end
 
 @implementation GPURecorWaterMarkViewController
@@ -44,6 +46,7 @@ typedef enum {
     [self.view bringSubviewToFront:self.startButton];
     [self.view bringSubviewToFront:self.warterMarkBtn];
     [self.view bringSubviewToFront:self.removeMarkBtn];
+    [self.view bringSubviewToFront:self.flowBtn];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
@@ -52,6 +55,12 @@ typedef enum {
     CGPoint point = [touch locationInView:_filteredVideoView];
      CGPoint cameraPoint = [_videoCamera.videoCaptureConnection.videoPreviewLayer captureDevicePointOfInterestForPoint:point];
     [self focusWithMode:AVCaptureFocusModeAutoFocus exposureMode:AVCaptureExposureModeAutoExpose atPoint:cameraPoint];
+}
+- (IBAction)actionForFlowBtn:(id)sender {
+    if(self.optionSegument.selectedSegmentIndex == 1)return;
+    _dataHandler = [[JKGPUImageCaptureDataHandler alloc]initWithImageSize:[UIScreen mainScreen].bounds.size resultsInBGRAFormat:YES];
+    _videoCamera.audioMetaDelegate = _dataHandler;
+    [_videoCamera addTarget:_dataHandler];
 }
 - (IBAction)actionForStartBtn:(UIButton *)sender {
     sender.selected = !sender.selected;
@@ -318,7 +327,7 @@ typedef enum {
     if (!_videoCamera) {
         Class class;
         if (self.optionSegument.selectedSegmentIndex == 0) {
-            class = [GPUImageVideoCamera class];
+            class = [JKGPUImageVideoCamera class];
         }else {
             class = [GPUImageStillCamera class];
         }

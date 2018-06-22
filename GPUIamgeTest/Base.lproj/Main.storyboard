@@ -58,6 +58,14 @@
                                     <action selector="actionForRemove:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HnV-sF-MuJ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bQB-8R-QeE">
+                                <rect key="frame" x="8" y="318" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="开启推流"/>
+                                <connections>
+                                    <action selector="actionForFlowBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gMq-6v-GIt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -73,6 +81,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="flowBtn" destination="bQB-8R-QeE" id="TCV-Tc-LDh"/>
                         <outlet property="optionSegument" destination="06j-g8-u2D" id="rlb-If-LYF"/>
                         <outlet property="removeMarkBtn" destination="qti-gL-X6I" id="SWH-Np-no6"/>
                         <outlet property="startButton" destination="JVi-7k-NXf" id="d5d-aB-hVc"/>

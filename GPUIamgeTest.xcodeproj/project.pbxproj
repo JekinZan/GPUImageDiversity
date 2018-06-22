@@ -24,6 +24,9 @@
 		18D095CD20DB3CD00073688F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D095CC20DB3CD00073688F /* AudioToolbox.framework */; };
 		18D095CF20DB3CD80073688F /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D095CE20DB3CD80073688F /* VideoToolbox.framework */; };
 		18D095D220DB40400073688F /* AudioTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D095D120DB40400073688F /* AudioTestController.m */; };
+		18F83E5D20DCFB5A007DE0A5 /* JKGPUImageCaptureDataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F83E5C20DCFB5A007DE0A5 /* JKGPUImageCaptureDataHandler.m */; };
+		18F83E6120DCFBF8007DE0A5 /* JKGPUImageVideoCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F83E6020DCFBF8007DE0A5 /* JKGPUImageVideoCamera.m */; };
+		18F83F0A20DD04A5007DE0A5 /* libyuv.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 18F83F0920DD04A5007DE0A5 /* libyuv.a */; };
 		3B364E4A08A18D1F7B8A9EAE /* libPods-GPUIamgeTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E7E324302560CAB617C61939 /* libPods-GPUIamgeTest.a */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +54,33 @@
 		18D095CE20DB3CD80073688F /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
 		18D095D020DB40400073688F /* AudioTestController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioTestController.h; sourceTree = "<group>"; };
 		18D095D120DB40400073688F /* AudioTestController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioTestController.m; sourceTree = "<group>"; };
+		18F83E5B20DCFB5A007DE0A5 /* JKGPUImageCaptureDataHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKGPUImageCaptureDataHandler.h; sourceTree = "<group>"; };
+		18F83E5C20DCFB5A007DE0A5 /* JKGPUImageCaptureDataHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKGPUImageCaptureDataHandler.m; sourceTree = "<group>"; };
+		18F83E5F20DCFBF7007DE0A5 /* JKGPUImageVideoCamera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKGPUImageVideoCamera.h; sourceTree = "<group>"; };
+		18F83E6020DCFBF8007DE0A5 /* JKGPUImageVideoCamera.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKGPUImageVideoCamera.m; sourceTree = "<group>"; };
+		18F83E6220DCFE34007DE0A5 /* JKVideoCameraProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKVideoCameraProtocol.h; sourceTree = "<group>"; };
+		18F83EF220DD04A5007DE0A5 /* libyuv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libyuv.h; sourceTree = "<group>"; };
+		18F83EF420DD04A5007DE0A5 /* scale_row.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scale_row.h; sourceTree = "<group>"; };
+		18F83EF520DD04A5007DE0A5 /* scale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scale.h; sourceTree = "<group>"; };
+		18F83EF620DD04A5007DE0A5 /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
+		18F83EF720DD04A5007DE0A5 /* cpu_id.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpu_id.h; sourceTree = "<group>"; };
+		18F83EF820DD04A5007DE0A5 /* video_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = video_common.h; sourceTree = "<group>"; };
+		18F83EF920DD04A5007DE0A5 /* compare_row.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = compare_row.h; sourceTree = "<group>"; };
+		18F83EFA20DD04A5007DE0A5 /* mjpeg_decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mjpeg_decoder.h; sourceTree = "<group>"; };
+		18F83EFB20DD04A5007DE0A5 /* rotate_row.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rotate_row.h; sourceTree = "<group>"; };
+		18F83EFC20DD04A5007DE0A5 /* planar_functions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = planar_functions.h; sourceTree = "<group>"; };
+		18F83EFD20DD04A5007DE0A5 /* scale_argb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scale_argb.h; sourceTree = "<group>"; };
+		18F83EFE20DD04A5007DE0A5 /* compare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = compare.h; sourceTree = "<group>"; };
+		18F83EFF20DD04A5007DE0A5 /* convert_argb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = convert_argb.h; sourceTree = "<group>"; };
+		18F83F0020DD04A5007DE0A5 /* rotate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rotate.h; sourceTree = "<group>"; };
+		18F83F0120DD04A5007DE0A5 /* convert_from_argb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = convert_from_argb.h; sourceTree = "<group>"; };
+		18F83F0220DD04A5007DE0A5 /* basic_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = basic_types.h; sourceTree = "<group>"; };
+		18F83F0320DD04A5007DE0A5 /* convert_from.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = convert_from.h; sourceTree = "<group>"; };
+		18F83F0420DD04A5007DE0A5 /* convert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = convert.h; sourceTree = "<group>"; };
+		18F83F0520DD04A5007DE0A5 /* rotate_argb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rotate_argb.h; sourceTree = "<group>"; };
+		18F83F0620DD04A5007DE0A5 /* macros_msa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = macros_msa.h; sourceTree = "<group>"; };
+		18F83F0720DD04A5007DE0A5 /* row.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = row.h; sourceTree = "<group>"; };
+		18F83F0920DD04A5007DE0A5 /* libyuv.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libyuv.a; sourceTree = "<group>"; };
 		8E2E5CB134C967456B9C462E /* Pods-GPUIamgeTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GPUIamgeTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GPUIamgeTest/Pods-GPUIamgeTest.debug.xcconfig"; sourceTree = "<group>"; };
 		92B5D5AAEAD5B9D6F27F217D /* Pods-GPUIamgeTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GPUIamgeTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-GPUIamgeTest/Pods-GPUIamgeTest.release.xcconfig"; sourceTree = "<group>"; };
 		E7E324302560CAB617C61939 /* libPods-GPUIamgeTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GPUIamgeTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +99,7 @@
 				18B1E88620D9FE9B00A3300C /* OpenGLES.framework in Frameworks */,
 				18B1E88420D9FE9300A3300C /* libGPUImage.a in Frameworks */,
 				18B1E88220D9FE8B00A3300C /* CoreVideo.framework in Frameworks */,
+				18F83F0A20DD04A5007DE0A5 /* libyuv.a in Frameworks */,
 				18B1E88020D9FE7E00A3300C /* CoreMedia.framework in Frameworks */,
 				3B364E4A08A18D1F7B8A9EAE /* libPods-GPUIamgeTest.a in Frameworks */,
 			);
@@ -98,6 +129,7 @@
 		18B1E86520D9FBD000A3300C /* GPUIamgeTest */ = {
 			isa = PBXGroup;
 			children = (
+				18F83EEF20DD03D0007DE0A5 /* Lib */,
 				18B1E86620D9FBD000A3300C /* AppDelegate.h */,
 				18B1E86720D9FBD000A3300C /* AppDelegate.m */,
 				18B1E86920D9FBD000A3300C /* GPURecorWaterMarkViewController.h */,
@@ -105,6 +137,7 @@
 				18D095D020DB40400073688F /* AudioTestController.h */,
 				18D095D120DB40400073688F /* AudioTestController.m */,
 				1805C49520DA2C3C00433885 /* FouncationView.h */,
+				18F83E5E20DCFBCA007DE0A5 /* Counstom */,
 				1805C49620DA2C3C00433885 /* FouncationView.m */,
 				18B1E86C20D9FBD000A3300C /* Main.storyboard */,
 				18B1E86F20D9FBD200A3300C /* Assets.xcassets */,
@@ -113,6 +146,79 @@
 				18B1E87520D9FBD200A3300C /* main.m */,
 			);
 			path = GPUIamgeTest;
+			sourceTree = "<group>";
+		};
+		18F83E5E20DCFBCA007DE0A5 /* Counstom */ = {
+			isa = PBXGroup;
+			children = (
+				18F83E5B20DCFB5A007DE0A5 /* JKGPUImageCaptureDataHandler.h */,
+				18F83E5C20DCFB5A007DE0A5 /* JKGPUImageCaptureDataHandler.m */,
+				18F83E5F20DCFBF7007DE0A5 /* JKGPUImageVideoCamera.h */,
+				18F83E6020DCFBF8007DE0A5 /* JKGPUImageVideoCamera.m */,
+				18F83E6220DCFE34007DE0A5 /* JKVideoCameraProtocol.h */,
+			);
+			path = Counstom;
+			sourceTree = "<group>";
+		};
+		18F83EEF20DD03D0007DE0A5 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				18F83EF020DD04A5007DE0A5 /* yuvlib */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		18F83EF020DD04A5007DE0A5 /* yuvlib */ = {
+			isa = PBXGroup;
+			children = (
+				18F83EF120DD04A5007DE0A5 /* include */,
+				18F83F0820DD04A5007DE0A5 /* lib */,
+			);
+			path = yuvlib;
+			sourceTree = "<group>";
+		};
+		18F83EF120DD04A5007DE0A5 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				18F83EF220DD04A5007DE0A5 /* libyuv.h */,
+				18F83EF320DD04A5007DE0A5 /* libyuv */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		18F83EF320DD04A5007DE0A5 /* libyuv */ = {
+			isa = PBXGroup;
+			children = (
+				18F83EF420DD04A5007DE0A5 /* scale_row.h */,
+				18F83EF520DD04A5007DE0A5 /* scale.h */,
+				18F83EF620DD04A5007DE0A5 /* version.h */,
+				18F83EF720DD04A5007DE0A5 /* cpu_id.h */,
+				18F83EF820DD04A5007DE0A5 /* video_common.h */,
+				18F83EF920DD04A5007DE0A5 /* compare_row.h */,
+				18F83EFA20DD04A5007DE0A5 /* mjpeg_decoder.h */,
+				18F83EFB20DD04A5007DE0A5 /* rotate_row.h */,
+				18F83EFC20DD04A5007DE0A5 /* planar_functions.h */,
+				18F83EFD20DD04A5007DE0A5 /* scale_argb.h */,
+				18F83EFE20DD04A5007DE0A5 /* compare.h */,
+				18F83EFF20DD04A5007DE0A5 /* convert_argb.h */,
+				18F83F0020DD04A5007DE0A5 /* rotate.h */,
+				18F83F0120DD04A5007DE0A5 /* convert_from_argb.h */,
+				18F83F0220DD04A5007DE0A5 /* basic_types.h */,
+				18F83F0320DD04A5007DE0A5 /* convert_from.h */,
+				18F83F0420DD04A5007DE0A5 /* convert.h */,
+				18F83F0520DD04A5007DE0A5 /* rotate_argb.h */,
+				18F83F0620DD04A5007DE0A5 /* macros_msa.h */,
+				18F83F0720DD04A5007DE0A5 /* row.h */,
+			);
+			path = libyuv;
+			sourceTree = "<group>";
+		};
+		18F83F0820DD04A5007DE0A5 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				18F83F0920DD04A5007DE0A5 /* libyuv.a */,
+			);
+			path = lib;
 			sourceTree = "<group>";
 		};
 		DF8168E5A5FD770CB54FD607 /* Pods */ = {
@@ -261,10 +367,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				18D095D220DB40400073688F /* AudioTestController.m in Sources */,
+				18F83E5D20DCFB5A007DE0A5 /* JKGPUImageCaptureDataHandler.m in Sources */,
 				1805C49720DA2C3C00433885 /* FouncationView.m in Sources */,
 				18B1E86B20D9FBD000A3300C /* GPURecorWaterMarkViewController.m in Sources */,
 				18B1E87620D9FBD200A3300C /* main.m in Sources */,
 				18B1E86820D9FBD000A3300C /* AppDelegate.m in Sources */,
+				18F83E6120DCFBF8007DE0A5 /* JKGPUImageVideoCamera.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +521,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/GPUIamgeTest/Lib/yuvlib/lib",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = jekin.GPUIamgeTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -431,6 +543,10 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/GPUIamgeTest/Lib/yuvlib/lib",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = jekin.GPUIamgeTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
